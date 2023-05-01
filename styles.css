@@ -1,0 +1,13 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: green;
+}

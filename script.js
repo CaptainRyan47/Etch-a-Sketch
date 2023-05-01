@@ -2,7 +2,8 @@ const sketchGrid = document.querySelector('#sketch-grid');
 
 function setGridSize(size) {
   //set sketchGrid so it has the correct number of rows and columns
-  sketchGrid.style.gridTemplate = '1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr';
+  sketchGrid.style.gridTemplate = 'repeat(' + size + ', 1fr) / repeat(' + size + ', 1fr)';
+  
   for (let i = 0; i < (size * size); i++) {
     const cell = document.createElement('div');
     cell.setAttribute('class', 'cell');
@@ -10,4 +11,4 @@ function setGridSize(size) {
   }
 };
 
-setGridSize(5);
+setGridSize(10);

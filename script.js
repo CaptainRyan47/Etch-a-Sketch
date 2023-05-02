@@ -1,4 +1,6 @@
 const sketchGrid = document.querySelector('#sketch-grid');
+const eraser = document.querySelector('#eraser');
+let eraserToggle = false;
 
 
 function setGridSize(size) {
@@ -13,8 +15,10 @@ function setGridSize(size) {
 };
 
 function changeColor(mouse) {
-  const cell = mouse.target.classList;
-  cell.add('black');
+  if (eraserToggle === false) {
+    mouse.target.classList.add('black');
+  }
+  else mouse.target.classList.remove('black');
 }
 
 
@@ -23,4 +27,9 @@ const gridCells = document.querySelectorAll('.cell');
 
 gridCells.forEach(cell => {
   cell.addEventListener('mouseover', (mouseoverCell) => changeColor(mouseoverCell));
+});
+
+eraser.addEventListener('click', () => {
+  if (eraserToggle === true) eraserToggle = false;
+  else eraserToggle = true;
 });

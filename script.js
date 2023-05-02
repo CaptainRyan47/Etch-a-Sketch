@@ -11,4 +11,10 @@ function setGridSize(size) {
   }
 };
 
-setGridSize(10);
+
+setGridSize(16);
+const gridCells = document.querySelectorAll('.cell');
+
+gridCells.forEach(cell => {
+  cell.addEventListener('mouseover', (cell) => console.log(cell));
+});

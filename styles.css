@@ -16,4 +16,5 @@
 
 .cell {
   background-color: green;
+  user-select: none;
 }

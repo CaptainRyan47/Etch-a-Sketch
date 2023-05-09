@@ -3,9 +3,9 @@ const eraser = document.querySelector('#eraser');
 const sizeInput = document.querySelector('#size');
 const sizeButton = document.querySelector('#size-button');
 
-sizeInput.value = 4;
+sizeInput.value = 16;
 let eraserToggle = false;
-setGridSize(4);
+setGridSize(16);
 
 
 

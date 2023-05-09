@@ -8,10 +8,39 @@
   display: grid;
 }
 
+.flex {
+  display: flex;
+}
+
+body {
+  text-align: center;
+}
+
+header>h1 {
+  font-size: 3rem;
+  margin: 5px;
+}
+
+#buttons-container {
+  width: 810px;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+
+button {
+  padding: .5em 3em;
+  font-size: 1.5rem;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
 #sketch-grid {
   border: 5px solid rebeccapurple;
   width: 810px;
   height: 810px;
+  margin: 10px auto;
 }
 
 .cell {
